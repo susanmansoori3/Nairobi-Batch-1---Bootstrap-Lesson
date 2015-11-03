@@ -5,3 +5,8 @@
 	background-postion: center;
 	padding: 146px 0px;
 }
+
+.container .jumbotron, 
+.container-fluid .jumbotron{
+	border-radius: 0px;
+}
