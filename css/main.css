@@ -1,3 +1,20 @@
+/*-----Bootstrap overrides-----*/
+.container .jumbotron, 
+.container-fluid .jumbotron{
+  border-radius: 0px;
+}
+
+.navbar-default {
+    background-color: #000;
+    border-color: #000;
+}
+
+.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form{
+    border-color: #2F2C2C;
+}
+
+/*------Animation-------*/
 .animated{
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -44,16 +61,19 @@
   animation-name: shake;
 }
 
-#pitch{
-	background-image: url('../images/cover-photo.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-postion: center;
-	background-attachment: fixed;
-	padding: 146px 0px;
+/*----- Navbar -----*/
+.logo{
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
-.container .jumbotron, 
-.container-fluid .jumbotron{
-	border-radius: 0px;
+
+/*----- Pitch area -----*/
+#pitch{
+  background-image: url('../images/cover-photo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-postion: center;
+  background-attachment: fixed;
+  padding: 146px 0px;
 }
