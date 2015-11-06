@@ -8,4 +8,4 @@
 
 ## Project roadmap
 - Add awesome pitch
-- Make works AJAX loaded 
+- Make works AJAX loaded
