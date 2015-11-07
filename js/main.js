@@ -29,16 +29,29 @@ $(document).ready(function() {
 
 	githubReposUrl = 'https://api.github.com/users/susanmansoori3/repos';
 	
-	$.get(githubReposUrl, function(data){
-		projectListTemplate = '<ul>'
-								+ '<li>'
-									+ '<h2><a href="#">Introduction to bootstrap</a></h2>'	
-									+ '<p>My project description</p>'
-									+ '<a href="#">Teams working on project</a>'
-								+ '</li>'
-							+'</ul>';
+		projectListTemplate = '';
+		projectListTemplate += '<ul>';
 
-		$('#open-source-content').append(projectListTemplate);	
+		$.get(githubReposUrl, function(repositories){
+
+		repositories.forEach(function(repository){
+			projectListTemplate += '<li>'
+				projectListTemplate += '<h2><a href="'+ repository.html_url'"></a>' +respository.name '</h2>'	
+				projectListTemplate += '<p>'+ respository.description '</p>'
+				projectListTemplate += '<a href="#">'+ '</a>'
+			projectListTemplate += '</li>'
+		})
+
+		projectListTemplate += '<ul>';
+		// projectListTemplate = '<ul>'
+		// 						+ '<li>'
+		// 							+ '<h2><a href="#">Introduction to bootstrap</a></h2>'	
+		// 							+ '<p>My project description</p>'
+		// 							+ '<a href="#">Teams working on project</a>'
+		// 						+ '</li>'
+		// 					+'</ul>';
+
+		$('#open-source-content').html(projectListTemplate);	
 	})
 
 
