@@ -26,4 +26,22 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
+
+	githubReposUrl = 'https://api.github.com/users/susanmansoori3/repos';
+	
+	$.get(githubReposUrl, function(data){
+		projectListTemplate = '<ul>'
+								+ '<li>'
+									+ '<h2><a href="#">Introduction to bootstrap</a></h2>'	
+									+ '<p>My project description</p>'
+									+ '<a href="#">Teams working on project</a>'
+								+ '</li>'
+							+'</ul>';
+
+		$('#open-source-content').append(projectListTemplate);	
+	})
+
+
+
+
 });
